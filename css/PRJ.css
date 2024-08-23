@@ -1,0 +1,501 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-image: url("./pict/photo13140954694\ \(2\).jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family:Poppise;
+
+}
+@font-face {
+    font-family: "Poppise";
+    src: url("./font/PoppinsLatin-Regular.ttf") format(truetype);}
+
+::selection{
+    background-color: #ca7900;
+    color: white;
+}
+.squer{
+    background-color: #ca7900;
+    position: fixed;
+    width: 200px;
+    height: 50px;
+    box-shadow: 4px 1px 12px 1px rgb(86, 86, 86);
+    transition: all 0.3s linear;
+    z-index: 4;
+    margin-left: -140px;
+}
+.squer:hover{
+    animation: menu 1s linear alternate;
+}
+.start{
+    display: flex;
+    padding-right: 100px;
+    gap: 30%;
+    margin-left: 25px;
+}
+.typing{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 80px;
+    animation: translatX1 2s ease alternate;
+    text-decoration: 2px solid black underline;
+    position: relative;
+    z-index: 2;
+
+}
+.orangman{
+    position: relative;
+    z-index: 3;
+    width: 27%;
+    margin-top: 25px;
+    animation: orangTrans1 2s ease alternate;
+}
+.girltype2{
+    width: 80px;
+    padding-top: 12px;
+    animation: girltrans 2s ease alternate ;
+}
+.Tname{
+    border-radius: 20px;
+    font-size: 100px;
+    font-weight: bold;
+    box-shadow: 7px 8px 15px 0px #734a1b57;
+    /* background: -webkit-linear-gradient(white,black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+
+    /* background: -webkit-image-set(url("./pict/T_bg.jpg"));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    
+
+}
+.header{
+    padding: 13px;
+    z-index: 2;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    transition: all 0.3s linear;
+    width: 100%;
+}
+.title{
+    margin-bottom: 20px;
+}
+.graph{
+    position: relative;
+    padding: 10px;
+    border-radius: 500px;
+    width: 100%;
+    height: 210px;
+    box-shadow: 2px 5px 7px 0px #00000057;
+    z-index: 1;
+    margin-top: 40px;
+    backdrop-filter:blur(7px) ;
+    
+}
+
+.title2{
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+    
+}
+#name{
+    font-size: 25px;
+    transition: all 270ms linear;
+}
+#inform{
+    height: 70px;
+    align-content: center;
+    text-align: center;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.3s linear;
+    
+}
+.patern{
+    text-align: center;
+    margin-top: 43px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 270ms linear;
+    font-size: 20px;
+}
+#box{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width:100%;
+    z-index: 1;
+    transition: all 0.3s linear;
+}
+.bottom{
+    justify-content: center;
+    align-items: center;
+}
+#Template{
+    height: 40px;
+    width: 450px;
+    background-color: #a9a9b0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+    font-size: 13px;
+    text-align: start;
+    padding-left: 9px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    
+}
+#textarea{
+    width: 450px;
+    height: 37vh;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: inherit;
+    color: black;
+    background-image: url(./pict/—Pngtree—computer\ keyboard\ transparent_8957497.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s linear;
+    
+    
+}
+textarea,output{
+    outline: none;
+    font-family:"Poppise";
+}
+#textarea:focus{
+    border: 3px solid #00000071;
+    background-image: unset;
+}
+.img{
+    width: 90px;
+    transition: all 270ms linear;
+}
+.main{
+    z-index: 2;
+    position:relative;
+}
+
+.boytype{
+    width: 20%;
+    margin-bottom: 40px;
+}
+.boy{
+    z-index: 2;
+    display: flex;
+    gap: 15%;
+}
+.girltype{
+    width: 100px;
+    margin-left: -20px;
+}
+.oldtype{
+    width: 20%;
+    height: 20%;
+}
+.time{
+    margin-top: 20px;
+    position: relative;
+    justify-content: center;
+    align-items: center  ;
+    text-align: center;
+    display: flex;
+    gap:70px;
+    padding-bottom: 200px;
+}
+.restart{
+    width: 60px;
+    height: 27px;
+}
+.timer{
+    font-size: 26px;
+    width: 175px;
+}
+@media screen and (max-width: 700px){
+    .header{
+        font-size: 14px;  
+    }
+    .squer{
+        margin-top: -55px;
+    }
+    .start{
+        margin-left: 0px;
+        margin-top: 52px;
+        gap: 20%;
+    }
+    
+    #inform{
+        font-size: 13px;
+    }
+    .namepatern{
+        font-size: 20px;
+    }
+    .img{
+        width: 70px;
+    }
+    #patern{
+        font-size: 17px;
+    }
+    #patern:hover {
+        font-size: 19px ;
+    }
+    #Template{
+        width: 370px;
+    }
+    #textarea{
+        width: 370px;
+        height: 200px;
+    }
+    .boytype{
+        width: 20%;
+        margin-left:2%;
+    }
+    .gitltype{
+        width: 90px;
+    }
+    .graph{
+        width: 100%;
+        height: 190px;
+        box-shadow: 3px 2px 7px 0px #00000057;
+    }
+    .typing{
+        font-size: 70px;
+        animation: translatX2 1s ease alternate;
+        margin-left: 35px;
+    }
+    .Tname{
+        font-size: 100px;
+    }
+    .girltype2{
+        width: 60px;
+        padding-top: 12px;
+    }
+    .orangman{
+        animation: orangTrans2 1s ease alternate;
+    } 
+    .boy{
+        gap: 17%;
+    }
+    .restart{
+        width: 50px;
+        height: 27px;
+        font-size: 9px;
+        text-align: center;
+
+    }
+    .timer{
+        font-size: 17px;
+    }
+    .time{
+        padding-bottom: 90px;
+        gap: 10px;
+    }
+} 
+@media screen and (max-width: 280px){
+    .squer{
+        height: 30px;
+        margin-top: -72px;
+        margin-left: -170px;
+    }    
+    .start{
+        margin-top: 72px;
+        margin-left: 50px;
+        gap: 10%;
+    }
+    .typing{
+        font-size: 30px;
+        animation: translatX3 1s ease alternate;
+        margin-left: -40px;
+    }
+    .Tname{
+        font-size: 70px;
+    }
+    .girltype2{
+        width: 29px;
+        padding-top: 12px;
+    }
+    .orangman{
+        animation: orangTrans3 1s ease alternate;
+        margin-top: 0px;
+        width: 100px;
+        height: 100px;
+    }
+    .header{
+        font-size: 5px;
+        padding: 8px;
+        margin-top: 20px;
+        width: 100%;
+        height: 138px;
+    }
+    .graph{
+        width: 98%;
+        height: 180px;
+        box-shadow: 3px 1px 7px 0px #00000057;
+    }
+    #name{
+        font-size: 12px;
+    }
+    .img{
+        width: 60px;
+    }
+    #inform{
+        font-size: 7px;
+    }
+    .patern{
+
+    }
+    .namepatern{
+        font-size: 12px;
+    }
+    .girltype{
+        width: 90px;
+        margin-left: -23px;
+    }
+    .bottom{
+
+    }
+    #Template{
+        height: 20px;
+        width: 194px;
+        font-size: 7px;
+        padding-left: 2px;
+    }
+    #textarea{
+        width: 194px;
+        height: 123px;
+        font-size: 8px;
+    }
+    .boy{
+        gap: 1%;
+    }
+    .boytype{
+        width: 20%;
+        margin-left: 0%;
+    }
+    .timer{
+        font-size: 9px;
+        width: 111px;
+    }
+    .time{
+        padding-bottom: 68px;
+        gap: 0px;
+        margin-top: 0px;
+    }
+    .restart{
+        width: 35px;
+        height: 16px;
+        font-size: 7px;
+        text-align: center;
+
+    }
+    .oldtype{
+        z-index: 2;
+        width: 20%;
+    }
+
+
+} 
+@keyframes translatX1 {
+    0%{
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+@keyframes translatX2 {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+@keyframes translatX3 {
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+@keyframes orangTrans1 {
+    0%{
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes orangTrans2 {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes orangTrans3{
+    0%{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes girltrans {
+    0%{
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes menu {
+    0%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(140px);
+    }
+}
+@keyframes menu2 {
+    0%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(90px);
+    }
+}
