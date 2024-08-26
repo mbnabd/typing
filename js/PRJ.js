@@ -2,7 +2,7 @@ const RESTART = document.querySelector(".restart");
 const TEXTAREA = document.querySelector(".textarea");
 const TIMER = document.querySelector(".timer");
 const Template = document.querySelector("#Template");
-const orgText = document.querySelector("#Template").innerHTML;
+const orgText = Template.innerHTML;
 
 
 //timer
@@ -32,8 +32,6 @@ function leadZero(time){
     return time;
 }
 
-
-
 //start with first keyPressing
 function start(){//start
     let textEnteredLenght=TEXTAREA.value.length;
@@ -44,12 +42,14 @@ function start(){//start
     }
 }
 
+//check
 function speel_check(){
     let textEntered=TEXTAREA.value;
     let originTextMatch=orgText.substring(0,textEntered.length);
-    if(textEntered == orgText){
-        clearInterval(interval);
+
+    if(textEntered==orgText){
         Template.style.color="green";
+        clearInterval(interval);
     }
     else{
         if(textEntered == originTextMatch){
@@ -72,17 +72,38 @@ function reset(){
     
 }
 
-function random(length){
-    const char= "A B CDE FGH IJKL MNOP QRST UVW YX Za bcdef ghij klm nop qrs tuy wyx z";
-    let result =" ";
-    const charLength=char.length;
-    for(let i=0 ; i<length ; i++){
-        result += char.charAt(Math.floor(Math.random()*charLength))
-    }
-    return result;
-}
-
 
 TEXTAREA.addEventListener("keyup",speel_check);
 TEXTAREA.addEventListener("keypress",start);
 RESTART.addEventListener("click",reset);
+
+
+
+//............................................................................
+
+const darkTxt = document.querySelector("#darkTXT");
+const dark = document.querySelector("#dark");
+const login = document.querySelector("#login");
+const about = document.querySelector("#about");
+const moon = document.querySelector(".moon");
+
+
+let m=1;
+function mood(){
+    if(m==1){
+        document.body.classList.toggle('dark-mood');
+        m=0;
+        darkTxt.innerHTML="Light";
+        Template.style.color="black";
+        TEXTAREA.style.color="white";
+        
+
+    }
+    else if(m==0){
+        document.body.classList.toggle('dark-mood');
+        m=1;
+        darkTxt.innerHTML="Dark";
+    }
+}
+
+dark.addEventListener('click' , mood);

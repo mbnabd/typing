@@ -9,29 +9,92 @@ body{
     background-size: cover;
     background-position: center;
     font-family:Poppise;
+    transition: all 1s ease;
+}
+.dark-mood{
+    background-image: url("../css/pict/dark2\ \(2\).jpg");
 
 }
+.dark-mood h2{
+    color: white;
+}
+.dark-mood p{
+    color: white;
+}
+.dark-mood .Tname{
+    box-shadow: 7px 8px 15px 0px #ffffff57;
+}
+.dark-mood .typing{
+    text-decoration: 2px solid #ffffff underline;
+}
+
+
 @font-face {
     font-family: "Poppise";
     src: url("./font/PoppinsLatin-Regular.ttf") format(truetype);}
-
+textarea,output,button,a{
+    outline: none;
+    font-family:"Poppise";
+    text-decoration: none;
+}
 ::selection{
     background-color: #ca7900;
     color: white;
 }
-.squer{
+.squer1{
     background-color: #ca7900;
     position: fixed;
-    width: 200px;
+    width: 250px;
     height: 50px;
     box-shadow: 4px 1px 12px 1px rgb(86, 86, 86);
-    transition: all 0.3s linear;
+    transition: margin 1s ease-in-out;
     z-index: 4;
-    margin-left: -140px;
+    margin-left: -200px;
+    padding-left: 38px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    border-radius: 7px;
 }
-.squer:hover{
-    animation: menu 1s linear alternate;
+.squer2{
+    background-color:#ca7900;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 7px;
 }
+.menu:hover .squer1{
+    margin-left: 0px;
+}
+.menu1{
+    width: 35px;
+    height: 35px;
+}
+
+.menuBTN{
+    color: black;
+    font-size: 14px;
+    transition: all 1s ease;
+}
+.menuBTN:hover{
+    text-shadow: 0px 0px 7px black;
+    font-size: 15px;
+}
+#dark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun{
+
+}
+
 .start{
     display: flex;
     padding-right: 100px;
@@ -65,17 +128,7 @@ body{
     border-radius: 20px;
     font-size: 100px;
     font-weight: bold;
-    box-shadow: 7px 8px 15px 0px #734a1b57;
-    /* background: -webkit-linear-gradient(white,black);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-
-
-    /* background: -webkit-image-set(url("./pict/T_bg.jpg"));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    
-
+    box-shadow: 7px 8px 15px 0px #a5601157;
 }
 .header{
     padding: 13px;
@@ -149,7 +202,7 @@ body{
     align-items: center;
 }
 #Template{
-    height: 40px;
+    height: 70px;
     width: 450px;
     background-color: #a9a9b0;
     margin-left: auto;
@@ -167,7 +220,7 @@ body{
 }
 #textarea{
     width: 450px;
-    height: 37vh;
+    height: 45vh;
     padding: 8px;
     border-radius: 3px;
     background-color: inherit;
@@ -180,10 +233,7 @@ body{
     
     
 }
-textarea,output{
-    outline: none;
-    font-family:"Poppise";
-}
+
 #textarea:focus{
     border: 3px solid #00000071;
     background-image: unset;
@@ -227,17 +277,24 @@ textarea,output{
 .restart{
     width: 60px;
     height: 27px;
+    background-color: #ca7900;
+    border-radius: 5px;
+
 }
 .timer{
     font-size: 26px;
     width: 175px;
 }
 @media screen and (max-width: 700px){
+    .squer1{
+        margin-top: -52px;
+
+    }
+    .squer2{
+        margin-top: -52px;
+    }  
     .header{
         font-size: 14px;  
-    }
-    .squer{
-        margin-top: -55px;
     }
     .start{
         margin-left: 0px;
@@ -313,11 +370,27 @@ textarea,output{
     }
 } 
 @media screen and (max-width: 280px){
-    .squer{
+    .squer1{
+        width: 180px;
         height: 30px;
+        margin-left: -140px;
+        padding-left: 18px;
+        gap: 10px;
         margin-top: -72px;
-        margin-left: -170px;
-    }    
+
+    }
+    .squer2{
+        width: 40px;
+        height:30px;
+        margin-top: -72px;
+    }  
+    .menu1{
+        width: 25px;
+        height: 25px;
+    }
+    .menuBTN{
+        font-size: 10px;
+    }
     .start{
         margin-top: 72px;
         margin-left: 50px;
@@ -376,10 +449,10 @@ textarea,output{
 
     }
     #Template{
-        height: 20px;
+        height: 40px;
         width: 194px;
         font-size: 7px;
-        padding-left: 2px;
+        padding-left: 4px;
     }
     #textarea{
         width: 194px;
@@ -480,22 +553,5 @@ textarea,output{
     }
     100%{
         transform: translateX(0px);
-    }
-}
-
-@keyframes menu {
-    0%{
-        transform: translateX(10px);
-    }
-    100%{
-        transform: translateX(140px);
-    }
-}
-@keyframes menu2 {
-    0%{
-        transform: translateX(10px);
-    }
-    100%{
-        transform: translateX(90px);
     }
 }
